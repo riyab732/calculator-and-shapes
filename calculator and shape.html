@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+      <head>
+            <style>
+           button{
+            width:120px;
+            height:50px;
+            margin:20px;
+            border: 5px solid white;
+            font-size:20px;
+           }
+           input{
+           margin-left:50px;
+          height:50px;
+          width:200px;
+          font-size:20px;
+           }
+            </style>
+            
+      </head>
+      <body>
+      <div style="height:100%;width:100%;display:flex;">
+      
+         <div style="height:100%;width:50%;background-color:blue;">
+         <div style="margin-left:100px;">
+         <h1 style="color:white;font-size:50px;">Change Different Shapes</h1>
+         
+          <div id ="shape" style="height: 300px;width:300px;background-color:black;border:10px solid white;margin-left:100px;"></div>
+          <br>
+          <button onclick="circle()" style="background-color:green;height:120px;border-radius:50%;">Circle</button>
+          <button onclick="square()" style="background-color:yellow;height:120px;">Square</button>
+          <button onclick="rectangle()" style="background-color:red;height:60px;">Rectangle</button>
+          <br>
+          <button onclick="reset()" style="background-color:black;width:100px;margin-left:200px;color:white;">Reset</button>
+          </div>
+          </div>
+          <!-- -->
+          <div style="height:100%;width:50%;background-color:black;">
+          <div style="margin-left:200px;">
+               <h1 style="color:white;font-size:50px;margin-left:40px;">Calculator</h1>
+          
+               <div id ="shape" style="height: 300px;width:300px;background-color:blue;border:10px solid white;">
+               <input type="number" placeholder="First number" id="fno"><br><br>
+               <input type="number" placeholder="Second number" id="sno">
+               <h4 id="cal" style="font-size:30px;color:red;margin-left:50px;">Result </h4>
+               </div>
+               
+               <br>
+               <button onclick="Add()">Add</button>
+               <button onclick="Subtract()">Subtract</button>
+               <br>
+               <button onclick="Multiply()">Multiply</button>
+               <button onclick="Divide()">Divide</button><br><br><br><br><br>
+           </div>
+          </div>
+          
+      </div>
+      </body>
+      <script>
+          function circle(){  
+            document.getElementById('shape').style['width']='300px';
+            document.getElementById('shape').style['background-color']='green';
+            document.getElementById('shape').style['border-radius']='50%';
+            }
+             function square(){  
+            document.getElementById('shape').style['width']='300px';
+            document.getElementById('shape').style['background-color']='yellow';
+            document.getElementById('shape').style['border-radius']='0%';
+            }
+             function rectangle(){  
+            document.getElementById('shape').style['width']='200px';
+            document.getElementById('shape').style['background-color']='red';
+            document.getElementById('shape').style['border-radius']='0%';
+            
+            }
+            function reset(){  
+            document.getElementById('shape').style['width']='300px';
+            document.getElementById('shape').style['background-color']='black';
+            document.getElementById('shape').style['border-radius']='0%';
+            
+            }
+            
+            
+           function Add(){                  
+            var fno=document.getElementById('fno').value;
+            var sno=document.getElementById('sno').value;
+      document.getElementById('cal').innerText=Number(fno)+Number(sno);
+            }
+            function Subtract(){             
+            var fno=document.getElementById('fno').value;
+            var sno=document.getElementById('sno').value;
+      document.getElementById('cal').innerText=Number(fno)-Number(sno);
+            }
+            function Multiply(){              
+            var fno=document.getElementById('fno').value;
+            var sno=document.getElementById('sno').value;
+      document.getElementById('cal').innerText=Number(fno)*Number(sno);
+            }
+            function Divide(){
+            var fno=document.getElementById('fno').value;
+            var sno=document.getElementById('sno').value;
+      document.getElementById('cal').innerText=Number(fno)/Number(sno);
+            }
+      </script>
+</html>
